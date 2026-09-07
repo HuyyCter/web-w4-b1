@@ -1,5 +1,5 @@
 # Bước 1: Build file WAR bằng Maven (JDK 21 cho build — xem lý do bên dưới)
-FROM maven:3.9-eclipse-temurin-25 AS build
+FROM maven:3.9-eclipse-temurin-21 AS build
 WORKDIR /app
 COPY . .
 RUN mvn clean package -DskipTests
