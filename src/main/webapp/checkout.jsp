@@ -9,6 +9,6 @@
 <body>
     <h2>Đặt hàng thành công!</h2>
     <p>Cảm ơn bạn đã mua hàng. Giỏ hàng của bạn đã được xóa.</p>
-    <a href="product-list.jsp" class="btn">Tiếp tục mua sắm</a>
+    <a href="index.jsp" class="btn">Tiếp tục mua sắm</a>
 </body>
 </html>

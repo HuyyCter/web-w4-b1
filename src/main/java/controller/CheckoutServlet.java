@@ -1,6 +1,5 @@
 package controller;
 
-import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -39,12 +38,12 @@ public class CheckoutServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		HttpSession session = request.getSession(false);
-        if (session != null) {
-            session.removeAttribute("cart"); 
-        }
-
-        RequestDispatcher dispatcher = request.getRequestDispatcher("checkout.jsp");
-        dispatcher.forward(request, response);
+		if (session != null) {
+			session.removeAttribute("cart");
+		}
+		
+		String url = "checkout.jsp";
+		request.getRequestDispatcher(url).forward(request, response);
 	}
 
 }

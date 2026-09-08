@@ -19,20 +19,22 @@
             <th>Amount</th>
             <th></th>
         </tr>
-        <c:forEach var="item" items="${sessionScope.cart.items}">
+        <c:forEach var="item" items="${sessionScope.cart.listCartItems}">
         	<tr>
             	<td>
-            		<form action="update-cart" method="post">
+            		<form action="cart" method="post">
+            			<input type="hidden" name="action" value="update">
 	            		<input type="hidden" name="productId" value="${item.product.id}">
 	             	    <input type="text" name="quantity" class="qty-input" value="${item.quantity}">
 	             	    <button type="submit" class="btn">Update</button>
             		</form>
             	</td>
-            	<td>${item.product.description}</td>
+            	<td>${item.product.name}</td>
            		<td>$${item.product.price}</td>
             	<td>$${item.amount}</td>
             	<td>
-            		<form action="remove-product" method="post" style="display:inline;">
+            		<form action="cart" method="post" style="display:inline;">
+            			<input type="hidden" name="action" value="remove">
                 		<input type="hidden" name="productId" value="${item.product.id}">
                 		<button type="submit" class="btn">Remove Item</button>
             		</form>
@@ -44,7 +46,7 @@
     <p><strong>To change the quantity</strong>, enter the new quantity and click on the Update button.</p>
 
     <div class="action-buttons">
-        <a href="product-list.jsp" class="btn">Continue Shopping</a>
+        <a href="index.jsp" class="btn">Continue Shopping</a>
         <form action="checkout" method="post" style="display:inline;">
         	<button type="submit" class="btn">Checkout</button>
     	</form>	

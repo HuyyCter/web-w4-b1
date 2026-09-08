@@ -21,7 +21,8 @@
                 <td>86 (the band) - True Life Songs and Pictures</td>
                 <td>$14.95</td>
                 <td>
-                    <form action="add-to-cart" method="post">
+                    <form action="cart" method="post">
+                        <input type="hidden" name="action" value="add">
                         <input type="hidden" name="productId" value="1">
                         <button type="submit" class="btn">Add To Cart</button>
                     </form>
@@ -31,7 +32,8 @@
                 <td>Paddlefoot - The first CD</td>
                 <td>$12.95</td>
                 <td>
-                    <form action="add-to-cart" method="post">
+                    <form action="cart" method="post">
+                    	<input type="hidden" name="action" value="add">
                         <input type="hidden" name="productId" value="2">
                         <button type="submit" class="btn">Add To Cart</button>
                     </form>
@@ -41,7 +43,8 @@
                 <td>Paddlefoot - The second CD</td>
                 <td>$14.95</td>
                 <td>
-                    <form action="add-to-cart" method="post">
+                    <form action="cart" method="post">
+                    	<input type="hidden" name="action" value="add">
                         <input type="hidden" name="productId" value="3">
                         <button type="submit" class="btn">Add To Cart</button>
                     </form>
@@ -51,7 +54,8 @@
                 <td>Joe Rut - Genuine Wood Grained Finish</td>
                 <td>$14.95</td>
                 <td>
-                    <form action="add-to-cart" method="post">
+                    <form action="cart" method="post">
+                    	<input type="hidden" name="action" value="add">
                         <input type="hidden" name="productId" value="4">
                         <button type="submit" class="btn">Add To Cart</button>
                     </form>
